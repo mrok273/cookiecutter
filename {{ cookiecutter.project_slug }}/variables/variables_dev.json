@@ -1,0 +1,14 @@
+{
+    "bigquery": {
+      "project": "your-bigquery-project-name"
+    },
+    "gcs": {
+      "prediction_output_bucket": "gs://your-prediction-output-bucket",
+      "pipeline_temp_bucket": "gs://your-pipeline-temp-bucket"
+    },
+    "schedule": {
+      "cron": "0 6 * * *",
+      "timezone": "Asia/Tokyo"
+    }
+  }
+  

@@ -1,0 +1,38 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "description"
+dependencies = []
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytype>=2023.5.31",
+    "pysen>=0.11.0",
+    "isort>=5.13.2",
+    "mypy>=1.10.0",
+    "black>=24.4.2",
+    "flake8>=7.0.0"
+]
+
+[tool.rye.project]
+src_dir = "null"
+
+[tool.pysen]
+version = "0.11"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+mypy_preset = "strict"
+line_length = 100
+
+[[tool.pysen.lint.mypy_targets]]
+paths = ["."]
+
+[tool.setuptools]
+packages = ["data", "src", "pipelines", "variables"]
